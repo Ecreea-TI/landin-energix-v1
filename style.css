@@ -122,6 +122,13 @@ ul {
   gap: 15px;
 }
 
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .social-link {
   width: 30px;
   height: 30px;
@@ -725,29 +732,6 @@ ul {
   justify-content: flex-end;
 }
 
-@media (max-width: 768px) {
-  .app-section {
-    padding: 100px 0;
-    background-position: top center;
-  }
-  
-  .app-section .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .app-content {
-    text-align: center;
-    padding: 0 15px;
-  }
-  
-  .section-text {
-    font-family: 'TT Supermolot Neue Regular', sans-serif;
-    font-size: 2.3rem;
-
-  }
-}
-
 .section-text {
   font-family: 'TT Supermolot Neue Regular', sans-serif;
   font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
@@ -926,7 +910,7 @@ textarea {
   height: 2px;
   bottom: -8px;
   left: 0;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(45deg, var(--blue-accent), var(--secondary-color));
 }
 
 .footer-column ul li {
@@ -994,6 +978,42 @@ textarea {
   opacity: 0.7;
 }
 
+/*mobile responsive*/
+
+@media (max-width: 768px) {
+  .container-2 {
+    flex-direction: column-reverse;
+  }
+
+  .app-section {
+    padding: 0px 0;
+    background-position: top center;
+  }
+  
+  .app-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-content {
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .section-text {
+    font-family: 'TT Supermolot Neue Regular', sans-serif;
+    font-size: 2.3rem;
+    line-height: 1.2em;
+
+  }
+
+  .section-title2 {
+    font-size: 2.5rem;
+    line-height: 1em;
+  }
+}
+
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero-title {
@@ -1023,8 +1043,9 @@ textarea {
     top: 100%;
     left: 0;
     width: 100%;
+    text-align: center;
     flex-direction: column;
-    background-color: var(--darker-bg);
+    background: linear-gradient(to right, #551dfc, #9644d0);
     padding: 20px;
     gap: 15px;
     transform: translateY(-100%);
@@ -1057,6 +1078,7 @@ textarea {
   
   .social-links, .quick-links {
     justify-content: center;
+    flex-direction: column;
   }
   
   .top-navbar .container {
@@ -1081,36 +1103,4 @@ textarea {
   .graph-item {
     transform: translate(-50%, -50%) rotate(calc(var(--rotation))) translateX(180px) rotate(calc(-1 * var(--rotation)));
   }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(106, 17, 203, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease forwards;
-}
-
-.animate-pulse {
-  animation: pulse 2s infinite;
 }
