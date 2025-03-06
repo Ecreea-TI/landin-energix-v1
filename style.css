@@ -1,0 +1,1116 @@
+@font-face {
+  font-family: 'TT Supermolot Neue Regular';
+  src: url('font/TTSupermolotNeue-Regular.eot');
+  src: local('TT Supermolot Neue Regular'), local('TTSupermolotNeue-Regular'),
+      url('font/TTSupermolotNeue-Regular.eot?#iefix') format('embedded-opentype'),
+      url('font/TTSupermolotNeue-Regular.woff2') format('woff2'),
+      url('font/TTSupermolotNeue-Regular.woff') format('woff'),
+      url('font/TTSupermolotNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Supermolot Neue Medium';
+  src: url('font/TTSupermolotNeue-Medium.eot');
+  src: local('TT Supermolot Neue Medium'), local('TTSupermolotNeue-Medium'),
+      url('font/TTSupermolotNeue-Medium.eot?#iefix') format('embedded-opentype'),
+      url('font/TTSupermolotNeue-Medium.woff2') format('woff2'),
+      url('font/TTSupermolotNeue-Medium.woff') format('woff'),
+      url('font/TTSupermolotNeue-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Supermolot Neue Demibold';
+  src: url('font/TTSupermolotNeue-DemiBold.eot');
+  src: local('TT Supermolot Neue DemiBold'), local('TTSupermolotNeue-DemiBold'),
+      url('font/TTSupermolotNeue-DemiBold.eot?#iefix') format('embedded-opentype'),
+      url('font/TTSupermolotNeue-DemiBold.woff2') format('woff2'),
+      url('font/TTSupermolotNeue-DemiBold.woff') format('woff'),
+      url('font/TTSupermolotNeue-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff00ff;
+  --blue-accent: #00FFFF;
+  --dark-bg: #0a0a1a;
+  --darker-bg: #050510;
+  --light-text: rgba(255, 255, 255, 0.87);
+  --card-bg: rgba(30, 30, 60, 0.5);
+  --neon-glow: 0 0 10px rgba(106, 17, 203, 0.7), 0 0 20px rgba(37, 117, 252, 0.5);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'TT Supermolot Neue Regular';
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+  color: var(--light-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  text-decoration: none;
+  color: var(--light-text);
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: #00FFFF;
+  color: #000;
+  box-shadow: var(--neon-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(106, 17, 203, 0.8), 0 0 30px rgba(37, 117, 252, 0.6);
+}
+
+/* Top Navbar */
+.top-navbar {
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  transform: translateY(-3px);
+  box-shadow: var(--neon-glow);
+}
+
+.quick-links { 
+  display: flex;
+  gap: 20px;
+}
+
+.quick-link {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.quick-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  transition: var(--transition);
+}
+
+.quick-link:hover:after {
+  width: 100%;
+}
+
+/* Main Navbar */
+.main-navbar {
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, #551dfc, #9644d0);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.main-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 15px;
+  width: auto;
+  filter: drop-shadow(var(--neon-glow));
+}
+
+.main-menu {
+  font-family: 'TT Supermolot Neue Regular', sans-serif, sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 25px;
+}
+
+.main-menu a {
+  position: relative;
+  font-weight: 500;
+}
+
+.main-menu a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, var(--blue-accent), var(--secondary-color));
+  transition: var(--transition);
+}
+
+.main-menu a:hover:after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-text);
+  transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(6, 6, 22, 0), rgba(6, 6, 22, 0)), url('assets/banner-1.webp');
+  background-size:cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin-bottom: 220px;
+}
+
+.hero-title {
+  font-family: 'TT Supermolot Neue', sans-serif;
+  font-weight: 400;
+  font-size: 2.9rem;
+  margin-bottom: 20px;
+  background: #00FFFF;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stats Counter Animation */
+@keyframes countUp {
+  from {
+    content: "0";
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.stat-number::after {
+  content: attr(data-target);
+  animation: countUp 2s ease-out forwards;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+
+/*Anillo*/
+.features-ring-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px 0px 50px;
+  width: 100%;
+}
+
+.features-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between; /* Separa ambos elementos */
+  gap: 40px; /* Espacio entre la lista y la imagen */
+  justify-content: space-between;
+}
+
+.features-list {
+  flex: 1;
+  max-width: 40%;
+}
+
+
+/* Seccion Caracteristicas*/
+
+.features-section {
+  padding: 100px;
+  color: white; /* Asegurar que el texto se vea bien sobre cualquier fondo */
+  font-family: Arial, sans-serif;
+  max-width: 600px; /* Ajusta el ancho si es necesario */
+}
+
+.feature-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  cursor: pointer;
+  font-size: 26px;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+/* 🎨 Cambia a verde al pasar el mouse */
+.feature-title:hover {
+  color: rgb(45, 169, 178);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+.open .arrow {
+  transform: rotate(180deg);
+}
+/* 🔥 Efecto de deslizamiento */
+.feature-content {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 200; /* Puedes cambiarlo según el peso que necesites */
+  display: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Cuando está activo (se muestra el contenido) */
+.feature-content.active {
+  max-height: 200px; /* Ajusta según el contenido */
+  opacity: 1;
+}
+
+
+/* Platform Section */
+.platform-section {
+  padding: 50px 0;
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+  background-color: var(--darker-bg);
+}
+
+.section-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  padding: 50px 20px 10px 10px;
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.section-title2 {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  font-size: 3.1rem;
+  padding:0;
+  margin-bottom: 20px;
+  background: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+} 
+
+.section-subtitle {
+  
+  font-family: 'TT Supermolot Neue Regular', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  padding: 0px 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;  
+  max-width: 85%;
+  margin: 0 auto 50px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--neon-glow);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  background: #00FFFF;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Graph Section */
+.graph-section {
+  padding: 100px 0;
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+}
+
+.interactive-graph {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10; /* Asegura que esté por encima del anillo */
+}
+
+/* Estilos para la imagen GIF */
+.graph-center-gif {
+  width: 200px;
+  height: auto;
+  margin-top: -50px;
+  position: absolute; /* Hace que la imagen se posicione dentro del núcleo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20; /* Mayor que el .graph-center para estar por encima */
+}
+
+
+.graph-orbit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('anillo-enered.webp'); /* Asegúrate de colocar la ruta correcta */
+  background-size: contain; /* Ajusta la imagen sin deformarla */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.graph-item {
+  position: absolute;
+  top: 40%;
+  left: 62%;
+  /* Ajustamos la forma ovalada con distintos valores de desplazamiento */
+  transform: translate(-150%, -50%) 
+             rotate(calc(var(--rotation))) 
+             translateX(180px) /* Aumenta X para hacerlo más ancho */
+             translateY(0px) /* Agrega Y para hacerlo más alto */
+             rotate(calc(-1 * var(--rotation)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.graph-container {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-item.active {
+ 
+  animation: blink 0.8s infinite;
+ 
+}
+
+.graph-item.active i {
+  color: white;
+}
+
+
+.graph-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #9C41E0, #3F1483, #0E054A);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 
+      inset 5px 5px 10px rgba(255, 255, 255, 0.6), 
+      inset -5px -5px 10px rgba(0, 0, 0, 0.4), 
+      0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.graph-icon::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 15px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.4), transparent);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  filter: blur(6px);
+  opacity: 0.7;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.graph-item:hover .graph-icon {
+  transform: translateY(-10px);
+ 
+}
+
+.graph-item:hover .graph-icon::after {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+/* 📌 ESTILO PARA EL TEXTO DEBAJO */
+.graph-item span {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* Services Section */
+.services-section {
+  padding: 100px 0;
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A)
+
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  padding: 50px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid #00FFFF;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--neon-glow);
+}
+
+.service-icon {
+  display: flex;
+  padding-right: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* App Section */
+.app-section {
+  position: relative;
+  width: 100%;
+  background: url('/assets/waves-blue.webp') no-repeat center center;
+  /*background-size: cover;*/
+  background-position: center;
+  padding: 150px 0px 0px 0px;
+  /*display: flex;*/
+  align-items: center;
+  overflow: hidden;
+}
+
+.app-section .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.app-content {
+  flex: 1;
+  max-width: 100%; /* Changed from 50% to 100% for better mobile display */
+  text-align: left;
+  padding: 0px 0px 250px 250px;
+}
+
+.container-2 {
+  display: flex;
+}
+
+.phone-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .app-section {
+    padding: 100px 0;
+    background-position: top center;
+  }
+  
+  .app-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-content {
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .section-text {
+    font-family: 'TT Supermolot Neue Regular', sans-serif;
+    font-size: 2.3rem;
+
+  }
+}
+
+.section-text {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.app-image {
+  display: none; /* Ocultamos la imagen si ya está como fondo */
+}
+
+.app-image img {
+  max-width: 60%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(106, 17, 203, 0.5));
+}
+
+
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 100px 0;
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--light-text);
+  font-family: 'TT Supermolot Neue', sans-serif;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.3);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.checkbox-group span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.recaptcha {
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+  padding: 80px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea todo a la izquierda */
+  text-align: left;
+  color: white; /* Ajusta el color según tu diseño */
+}
+
+.footer-logo p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.footer-contact {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el icono y el texto */
+  margin-bottom: 10px; /* Espaciado entre elementos */
+}
+
+.contact-item i {
+  font-size: 20px; /* Tamaño del icono */
+  color: #00d0ff; /* Ajusta el color de los iconos */
+}
+
+.contact-item div {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+
+.footer-links {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  flex: 1;
+}
+
+.footer-links h3,
+.footer-links ul li a {
+  
+  font-weight: 400;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-column h3:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  bottom: -8px;
+  left: 0;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.footer-column ul li a:hover {
+  opacity: 1;
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: var(--secondary-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  transform: translateY(-3px);
+  box-shadow: var(--neon-glow);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .app-section .container {
+    flex-direction: column;
+  }
+  
+  .app-content, .app-image {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .main-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--darker-bg);
+    padding: 20px;
+    gap: 15px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+  
+  .main-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .footer-top, .footer-links, .footer-bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .social-links, .quick-links {
+    justify-content: center;
+  }
+  
+  .top-navbar .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .interactive-graph {
+    height: 400px;
+  }
+  
+  .graph-item {
+    transform: translate(-50%, -50%) rotate(calc(var(--rotation))) translateX(180px) rotate(calc(-1 * var(--rotation)));
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(106, 17, 203, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(106, 17, 203, 0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="isotipo-energix.png">
+    <title>ENERGIX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Top Navbar -->
+      <nav class="top-navbar">
+        <div class="container">
+          <!-- Redes Sociales -->
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+      
+          <!-- Enlaces rápidos y nuevos íconos -->
+          <div class="quick-links">
+            <a href="#" class="quick-link">Formación Online</a>
+            <a href="#" class="quick-link">Comunidad</a>
+            <a href="#" class="quick-link">Contáctanos</a>
+      
+            <!-- Barra de separación -->
+            <span class="separator">|</span>
+      
+            <!-- Íconos adicionales -->
+            <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>  <!-- Carrito -->
+            <a href="#" class="icon-link"><i class="fas fa-user"></i></a>           <!-- Perfil -->
+            <a href="#" class="icon-link"><i class="fas fa-search"></i></a>         <!-- Buscar -->
+            <a href="#" class="icon-link"><i class="fas fa-bars"></i></a>           <!-- Menú hamburguesa -->
+          </div>
+        </div>
+      </nav>
+      
+
+      <!-- Main Navbar -->
+      <nav class="main-navbar">
+        <div class="container">
+          <div class="logo">
+            <img src="/assets/logo-energix-horizontal.webp" alt="Energix Logo" class="logo-img">
+          </div>
+          <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul class="main-menu">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="#industrias">Industrias</a></li>
+            <li><a href="#enered">Enered</a></li>
+            <li><a href="#puntos-red">Puntos Red</a></li>
+            <li><a href="#energia-futuro">Energía & Futuro</a></li>
+            <li><a href="#soporte">Soporte</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">Impulsamos soluciones de alto valor en energía para todas las Industrias del Perú</h1>
+            
+          <div class="hero-stats" data-aos="fade-left">
+            <div class="stat-item">
+              <span class="stat-number" id="clientesCounter">0</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="proyectosCounter">0</span>
+              <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="ahorroCounter">0</span>
+              <span class="stat-label">% Ahorro</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bg" ></div>
+      </section>
+
+     
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">La plataforma en la nube que Centraliza el
+            <br> Control & Suministro Integral de Combustible</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Las Industrias necesitan integración en la Energía. Nuestra plataforma integral flexible lo hace posible con una negociación sencilla que proporciona al usuario una experiencia máxima con una huella tecnológica mínima.
+          </p>
+        </div>
+
+   <!-- Seccion Anillo-->     
+        
+
+      <section class="features-ring-section">
+        <div class="features-container">
+          <!-- Características (a la izquierda) -->
+          <div class="features-list">
+            <h3 class="feature-title" onclick="toggleFeature(this, 'analisis')">Consultoría <span class="arrow">▼</span></h3>
+            <p class="feature-content">La mejor asesoría para optimizar tus recursos energéticos y reducir costos.</p>
+      
+            <h3 class="feature-title" onclick="toggleFeature(this, 'desarrollo')">Desarrollo <span class="arrow">▼</span></h3>
+            <p class="feature-content">Soluciones a medida para tus necesidades específicas.</p>
+      
+            <h3 class="feature-title" onclick="toggleFeature(this, 'centralizacion')">Centralización <span class="arrow">▼</span></h3>
+            <p class="feature-content">Control unificado de todos tus recursos energéticos.</p>
+      
+            <h3 class="feature-title" onclick="toggleFeature(this, 'escalabilidad')">Escalabilidad <span class="arrow">▼</span></h3>
+            <p class="feature-content">Crece sin límites con nuestra plataforma adaptable.</p>
+          </div>
+      
+          <!-- Anillo (a la derecha) -->
+          <div class="graph-container">
+            <div class="interactive-graph" data-aos="zoom-in">
+              <!-- Núcleo del átomo -->
+              <div class="graph-center">
+                <img src="enered-esfera.gif" alt="Animación-ENERED" class="graph-center-gif">
+              </div>
+      
+              <!-- Órbita de los electrones -->
+              <div class="graph-orbit">
+                <div class="graph-item" id="desarrollo" style="--rotation: 0deg">
+                  <div class="graph-icon"><i class="fas fa-file-alt"></i></div>
+                  <span>Informes</span>
+                </div>
+                <div class="graph-item" id="centralizacion" style="--rotation: 36deg">
+                  <div class="graph-icon"><i class="fas fa-warehouse"></i></div>
+                  <span>Almacén</span>
+                </div>
+                <div class="graph-item" id="escalabilidad " style="--rotation: 72deg">
+                  <div class="graph-icon"><i class="fas fa-project-diagram"></i></div>
+                  <span>Proyectos</span>
+                </div>
+                <div class="graph-item" id="estaciones" style="--rotation: 108deg">
+                  <div class="graph-icon"><i class="fas fa-charging-station"></i></div>
+                  <span>Estaciones</span>
+                </div>
+                <div class="graph-item" id="suministro-industrial" style="--rotation: 144deg">
+                  <div class="graph-icon"><i class="fas fa-industry"></i></div>
+                  <span>Suministro Industrial</span>
+                </div>
+                <div class="graph-item" id="delivery-suministro" style="--rotation: 180deg">
+                  <div class="graph-icon"><i class="fas fa-truck"></i></div>
+                  <span>Delivery Suministro</span>
+                </div>
+                <div class="graph-item" id="red-flotas" style="--rotation: 216deg">
+                  <div class="graph-icon"><i class="fas fa-network-wired"></i></div>
+                  <span>Red de Flotas</span>
+                </div>
+                <div class="graph-item" id="servicios" style="--rotation: 252deg">
+                  <div class="graph-icon"><i class="fas fa-tools"></i></div>
+                  <span>Servicios</span>
+                </div>
+                <div class="graph-item" id="postventa" style="--rotation: 288deg">
+                  <div class="graph-icon"><i class="fas fa-headset"></i></div>
+                  <span>Post Venta</span>
+                </div>
+                <div class="graph-item" id="analisis" style="--rotation: 324deg">
+                  <div class="graph-icon"><i class="fas fa-chart-line"></i></div>
+                  <span>Análisis</span>
+                </div>
+              </div>
+              
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- Services Grid Section -->
+      <section class="services-section">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">Un ecosistema en armonía</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Tecnología aplicada a industrias específicas para permitir una ventaja competitiva en estos sectores
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+              <div class="service-icon">
+                <img src="/assets/icon-website.webp" alt="" height="40px" style="padding-right: 20px;">
+              <h3>Centro Integral</h3>
+            </div>
+              <p>Control y seguimiento</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-icon">
+                <img src="/assets/icon-truck.webp" alt="" height="40px" style="padding-right: 20px;">
+              <h3>Combustible</h3>
+            </div>
+              <p>Soluciones de suministro</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-icon">
+                <img src="/assets/icon-fuel.webp" alt="" height="40px" style="padding-right: 20px;">
+              <h3>Estaciones</h3>
+            </div>
+            <div style="display: flex;">
+            <span style="width: 60px"></span>
+              <p>Monitoreo Especializado</p>
+            </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-icon">
+                <img src="/assets/icon-storage.webp" alt="" height="40px" style="padding-right: 20px;">
+              <h3>Almacenamiento</h3>
+            </div>
+            <div style="display: flex;">
+              <span style="width: 60px"></span>
+                <p>Administración integral</p>
+              </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-icon">
+                <img src="/assets/icon-network.webp" alt="" height="40px" style="padding-right: 20px;">
+              <h3>Proyectos</h3>
+            </div>
+              <p>Desarrollo de Soluciones</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-icon">
+                <img src="/assets/icon-setup.webp" alt="" height="40px" style="padding-right: 20px;">
+              <h3>Servicios</h3>
+            </div>
+            <div style="display: flex;">
+              <span style="width: 60px"></span>
+                <p>Soporte Integrado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- App Section -->
+<section class="app-section">
+  <div class="container-2">
+    <div class="app-content" data-aos="fade-right">
+      <h2 class="section-title2">Encuentra a Enered en tu ruta</h2>
+      <p class="section-text">
+        Evolucionamos para darte soluciones inteligentes que te
+        <br>permiten gestionar todo tipo de flotas de una forma 
+        <br>más
+        simple, eficiente y confiable.
+      </p>
+      <a href="#" class="btn btn-primary">¡Comienza a Ahorrar!</a>
+    </div>
+    <div class="phone-image" data-aos="fade-left">
+      <img src="/assets/app-phone.webp" alt="" width="80%">
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contacto">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">¿Estás listo para desarrollar o escalar tu
+            <br>proyecto en combustible o energía?</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Contáctanos, solicita una demostración de nuestros productos y servicios e invítanos a trabajar a tu lado
+          </p>
+          
+          <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Nombre(s)*" required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Apellido(s)*" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" placeholder="Correo Electrónico" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Número de Teléfono" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Nombre de tu Empresa*" required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="RUC*" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Provincia/Departamento*  " required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Correo electrónico de empresa" required>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <textarea placeholder="Déjanos tu Mensaje" rows="4" required></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>He leído y acepto la política de privacidad</span>
+              </label>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>He leído y acepto los términos y condiciones</span>
+              </label>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>He leído y acepto la política de cookies</span>
+              </label>
+            </div>
+            <div class="form-group recaptcha">
+              <div class="g-recaptcha"></div>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-top">
+            <div class="footer-logo">
+              <img src="assets/logo-energix-vertical.webp" alt="Energix - Soluciones en Energías" height="35px">
+              
+            
+              <div class="footer-contact">
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <div>
+                    <strong>Llámanos</strong><br>
+                    (044) 659-3519 | +51 972 228 870
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <strong>Escríbenos</strong><br>
+                    hola@energix.pe
+                  </div>
+                </div>
+            
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <strong>Visítanos</strong><br>
+                    Av. Fátima # 567 - Piso 4 - Trujillo
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="footer-links">
+              <div class="footer-column">
+                <h3>Nosotros</h3>
+                <ul>
+                  <li><a href="#">Cultura</a></li>
+                  <li><a href="#">Trayectoria</a></li>
+                  <li><a href="#">Trabaja con nosotros</a></li>
+                  <li><a href="#">Responsabilidad Social</a></li>
+                  <li><a href="#">Ser socio</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Soluciones</h3>
+                <ul>
+                  <li><a href="#">Enered</a></li>
+                  <li><a href="#">Combustibles</a></li>
+                  <li><a href="#">Estaciones</a></li>
+                  <li><a href="#">Almacenes</a></li>
+                  <li><a href="#">Consultoría</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Atención</h3>
+                <ul>
+                  <li><a href="#">Proveedor</a></li>
+                  <li><a href="#">Comunicaciones</a></li>
+                  <li><a href="#">Comprobantes</a></li>
+                  <li><a href="#">Facturación</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Ética y Transparencia</h3>
+                <ul>
+                  <li><a href="#">Código de Ética</a></li>
+                  <li><a href="#">Políticas Corporativas</a></li>
+                  <li><a href="#">Términos y Condiciones de Servicio</a></li>
+                  <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+           
+            <div class="social-links">
+              <p>Síguenos en:</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>ENERED | Red inteligente de Energías | Copyright © 2025 | Energía Perú | Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
