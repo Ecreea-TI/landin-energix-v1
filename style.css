@@ -1,3 +1,18 @@
+/*Fonts*/
+
+@font-face {
+  font-family: 'TT Supermolot Neue Thin';
+  src: url('font/TTSupermolotNeue-Thin.eot');
+  src: local('TT Supermolot Neue Thin'), local('TTSupermolotNeue-Thin'),
+      url('font/TTSupermolotNeue-Thin.eot?#iefix') format('embedded-opentype'),
+      url('font/TTSupermolotNeue-Thin.woff2') format('woff2'),
+      url('font/TTSupermolotNeue-Thin.woff') format('woff'),
+      url('font/TTSupermolotNeue-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: 'TT Supermolot Neue Regular';
   src: url('font/TTSupermolotNeue-Regular.eot');
@@ -441,8 +456,8 @@ ul {
 
 .section-subtitle {
   
-  font-family: 'TT Supermolot Neue Regular', sans-serif, sans-serif;
-  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  font-family: 'TT Supermolot Neue Thin', sans-serif, sans-serif;
+  font-weight: 100; /* Puedes cambiarlo según el peso que necesites */
   padding: 0px 20px;
   font-size: 1.6rem;
   line-height: 2rem;  
@@ -1169,8 +1184,6 @@ textarea {
   padding: 0 20px;
 }
 
-
-
 .benefits-section {
   position: relative;
   width: 100vw;
@@ -1203,7 +1216,7 @@ color: var(--blue-accent);
   font-weight: 400;
 }
 
-.benefits-text {
+.benefits-subtitle {
   font-size: 1.6rem;
 }
 
@@ -1212,6 +1225,40 @@ color: var(--blue-accent);
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 50px;
+}
+
+.benefits-card {
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid #00FFFF;
+}
+
+.benefits-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--neon-glow);
+}
+
+.benefits-icon {
+  display: flex;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.benefits-text h2 {
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+  font-weight: 400;
+  font-size: 2.1em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.benefits-text h3 {
+  font-family: 'TT Supermolot Neue Thin', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 1.5em;
 }
 
 
