@@ -1132,9 +1132,56 @@ textarea {
   font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
   font-size: 3.1rem;
   padding:0;
-  margin-bottom: 20px;
   background: #fff;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-} 
+}
+
+.section-text-our {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+
+/*mobile responsive our page*/
+
+@media (max-width: 768px) {
+  .container-2 {
+    flex-direction: column-reverse;
+  }
+
+  .app-section {
+    padding: 0px 0;
+    background-position: top center;
+  }
+  
+  .app-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-content-our {
+    text-align: center;
+    padding: 0 15px;
+    padding: 30px 0px 20px 0px;
+  }
+
+  .app-content-our img {
+    width: 80%;
+  }
+  
+  .section-text-our {
+    font-family: 'TT Supermolot Neue Regular', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+
+  }
+
+  .section-title2-our {
+    font-size: 2.5rem;
+  }
+}
