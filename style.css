@@ -60,6 +60,7 @@
   --card-bg: rgba(30, 30, 60, 0.5);
   --neon-glow: 0 0 10px rgba(106, 17, 203, 0.7), 0 0 20px rgba(37, 117, 252, 0.5);
   --neon-blue: 0 0 10px rgba(9, 209, 245, 0.986), 0 0 20px rgba(13, 227, 255, 0.747);
+  --neon-gray: 0 0 10px rgba(73, 73, 73, 0.404), 0 0 20px rgba(41, 41, 41, 0.205);
   --transition: all 0.3s ease;
 }
 
@@ -1272,7 +1273,7 @@ color: var(--blue-accent);
 
 /* Tools Grid Section */
 .tools-section {
-  padding: 0;
+  padding: 0px 0px 100px 0px;
   background: var(--background-gradient);
 }
 
@@ -1365,6 +1366,137 @@ color: var(--blue-accent);
   opacity: 0.8;
 }
 
+.plans-section {
+  padding: 100px 0;
+  background: #F1F1F1;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.plan-card {
+  color: #5B5B5B;
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--blue-accent);
+  box-shadow: var(--neon-gray);
+}
+
+.plan-card h3 {
+  color: #092086;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+}
+
+.plan-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #0032EA;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.plan-subtitle {
+  color: #727272;
+  font-family: 'TT Supermolot Neue Thin', sans-serif, sans-serif;
+  font-weight: 100; /* Puedes cambiarlo según el peso que necesites */
+  padding: 0px 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;  
+  max-width: 85%;
+  margin: 0 auto 50px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.plan-description {
+  color: var(--text-color);
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.plan-features h4 {
+  color: #5B5B5B;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+}
+
+.plan-features p {
+  color: #5B5B5B;
+}
+
+.plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.plan-features ul li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+.plan-features ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #5B5B5B;
+}
+
+.plan-contact {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin: 30px 0;
+  opacity: 0.8;
+}
+
+.plan-more-info {
+  display: block;
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 20px;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.plan-more-info:hover {
+  opacity: 1;
+}
+
+.btn-secondary {
+  background: #00FFFF;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
 /*mobile responsive our page*/
 
 @media (max-width: 768px) {
@@ -1409,5 +1541,17 @@ color: var(--blue-accent);
     .tools-grid {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
   }
 }
