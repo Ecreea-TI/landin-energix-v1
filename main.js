@@ -245,3 +245,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const caseCards = document.querySelectorAll('.case-card');
+    const mainVideo = document.querySelector('.main-video iframe');
+
+    caseCards.forEach(card => {
+        const playOverlay = card.querySelector('.play-overlay');
+        const videoIframe = card.querySelector('iframe');
+
+        playOverlay.addEventListener('click', function() {
+            if (videoIframe) {
+                const videoSrc = videoIframe.getAttribute('src');
+                mainVideo.setAttribute('src', videoSrc);
+                
+                // Scroll to main video
+                mainVideo.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});

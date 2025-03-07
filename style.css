@@ -1489,12 +1489,143 @@ color: var(--blue-accent);
 }
 
 .btn-secondary {
+  text-align: center;
+  display: block;
   background: #00FFFF;
   color: #000;
 }
 
 .btn-secondary:hover {
   transform: translateY(-3px);
+}
+
+.why-container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.why-title {
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  background: var(--darker-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.why-enered-section {
+  background-color: #F1F1F1;
+  padding: 100px 0;
+}
+
+.why-enered-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.why-card {
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+}
+
+.why-icon {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  text-align: left;
+  color: var(--darker-bg);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+}
+
+.why-card p {
+  text-align: left;
+  color: var(--dark-bg);
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+
+.clients-section {
+  padding: 100px 0;
+  background: #F1F1F1;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.main-video {
+  position: relative;
+  padding-bottom: 72%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.main-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.client-cases {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Cambiado a grid para mejor organización */
+  gap: 20px;
+}
+
+.case-card {
+  border-radius: 15px;
+  background-color: #0032EA;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%; /* Asegura altura consistente */
+}
+
+.case-thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
+  aspect-ratio: 16/9; /* Mantiene proporción de video */
+}
+
+.case-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+  display: block;
+}
+
+.case-card h3 {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-top: 15px;
+  text-align: center;
 }
 
 /*mobile responsive our page*/
@@ -1553,5 +1684,39 @@ color: var(--blue-accent);
 @media (max-width: 768px) {
   .plans-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .why-enered-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-enered-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-cases {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .case-card {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-card {
+    min-width: 100%;
   }
 }
