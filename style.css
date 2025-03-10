@@ -137,6 +137,7 @@ ul {
 .social-links {
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -874,7 +875,7 @@ textarea {
 .footer {
   background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
   padding: 80px 0 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(26, 227, 253, 0.411);
 }
 
 .footer-logo {
@@ -929,6 +930,7 @@ textarea {
   flex-wrap: wrap;
   gap: 50px;
   flex: 1;
+  justify-content: center;
 }
 
 .footer-links h3,
@@ -968,11 +970,15 @@ textarea {
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 30px;
   padding: 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(26, 227, 253, 0.411);
+}
+
+.footer-links h3 {
+  color: var(--blue-accent);
 }
 
 .contact-info p {
