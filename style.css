@@ -102,7 +102,7 @@ ul {
   padding: 12px 30px;
   border-radius: 30px;
   font-weight: bold;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 1px;
   transition: var(--transition);
   cursor: pointer;
@@ -119,6 +119,16 @@ ul {
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(106, 17, 203, 0.8), 0 0 30px rgba(37, 117, 252, 0.6);
+}
+
+.btn-primary-noshadow {
+  background: #00FFFF;
+  color: #000;
+}
+
+.btn-primary-noshadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(6, 224, 240, 0.205), 0 0 30px rgba(37, 117, 252, 0.6);
 }
 
 /* Top Navbar */
@@ -1726,3 +1736,50 @@ color: var(--blue-accent);
     min-width: 100%;
   }
 }
+
+/* Styles Enered page */
+.enered-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(6, 6, 22, 0.301), rgba(6, 6, 22, 0)), url('assets/bg-fuel-tank.webp');
+  background-size:cover;
+  background-position: center;
+}
+
+.enered-hero-section {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  padding: 80px 0px 100px 0px;
+  align-items: center;
+  overflow: hidden;
+  animation: floatBackground 4s ease-in-out infinite;
+}
+
+.enered-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  font-size: 3.1rem;
+  padding:0;
+  background: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.enered-subtitle {
+  font-family: 'TT Supermolot Neue Thin', sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  opacity: 0.9;
+  line-height: 2.2rem;
+}
+
+
+
+/*mobile responsive page*/
