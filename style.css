@@ -1780,6 +1780,272 @@ color: var(--blue-accent);
   line-height: 2.2rem;
 }
 
+.supply-chain-section {
+  background: linear-gradient(to right, #3F1483, #370B5B, #0E054A);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.supply-container {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 500px;
+  background-image: url('/assets/img-supply-chain.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.supply-chain-section .section-title {
+  color: #00FFFF;
+  margin-bottom: 60px;
+}
+
+.supply-chain-visual {
+  position: relative;
+  min-height: 500px;
+  background-image: url('/assets/supply-chain-bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.supply-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  padding: 0px 200px;
+  line-height: 1.2em;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-align: left;
+  background: var(--blue-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chain-element {
+  position: absolute;
+  color: #00FFFF;
+  font-size: 2.0rem;
+}
+
+.chain-text {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  /*background: rgba(26, 11, 46, 0.8);*/
+  border-radius: 4px;
+  /*border: 1px solid #00FFFF;*/
+}
+
+.granel {
+  left: 41%;
+  bottom: 5%;
+}
+
+.flota {
+  left: 53%;
+  bottom: 24%;
+}
+
+.delivery {
+  left: 63%;
+  bottom: 43%;
+}
+
+.industria {
+  left: 76%;
+  bottom: 65%;
+}
+
+.fleet-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  padding: 20px 20px 0px 10px;
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  background: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.fleet-subtitle {
+  
+  font-family: 'TT Supermolot Neue Thin', sans-serif, sans-serif;
+  font-weight: 100; /* Puedes cambiarlo según el peso que necesites */
+  padding: 0px 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;  
+  max-width: 85%;
+  margin: 0 auto 50px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.fleet-container {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.fleet-card {
+  padding: 50px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid #00FFFF;
+}
+
+.fleet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--neon-glow);
+}
+
+.fleet-icon {
+  display: flex;
+  padding: 20px 0px
+}
+
+.fleet-card h3 {
+  font-family: 'TT Supermolot Neue Regular', sans-serif, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: left;
+  color: var(--blue-accent);
+}
+
+.fleet-card p {
+  text-align: left;
+  line-height: 1.2rem;
+  padding-bottom: 1em;
+}
+
+.fleet-card ul {
+  text-align: left;
+}
+
+.coverage-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.container-full {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.coverage-container {
+
+}
+
+.coverage-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+  font-size: 2.5rem;
+  color: #0032EA;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.coverage-subtitle {
+  font-family: 'TT Supermolot Neue Thin', sans-serif;
+  font-size: 1.2rem;
+  color: #5B5B5B;
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 0.8;
+}
+
+.coverage-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.coverage-map {
+  flex: 1;
+  max-width: 40%;
+}
+
+.coverage-map img {
+  width: 100%;
+  height: auto;
+}
+
+.coverage-zones {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+}
+
+.zone {
+  flex: 1;
+}
+
+.zone h3 {
+  color: #0032EA;
+}
+
+.zone ul {
+  list-style: none;
+  padding: 0;
+}
+
+.zone ul li {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.zone ul li:hover {
+  opacity: 1;
+  transform: translateX(5px);
+}
 
 
 /*mobile responsive page*/
+
+@media (max-width: 768px) {
+  .supply-chain-visual {
+    min-height: 300px;
+  }
+  
+  .chain-element {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .coverage-content {
+    flex-direction: column;
+  }
+  
+  .coverage-map {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverage-zones {
+    flex-direction: column;
+  }
+  
+  .coverage-title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
