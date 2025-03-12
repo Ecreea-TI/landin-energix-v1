@@ -269,6 +269,56 @@ ul {
   transition: var(--transition);
 }
 
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(to right, #3F1483, #370B5B);
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 8px 20px;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #00FFFF;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .submenu {
+    position: static;
+    background: transparent;
+    display: none;
+    padding-left: 20px;
+  }
+
+  .has-submenu.active .submenu {
+    display: block;
+  }
+}
+
 /* Hero Section */
 .hero {
   position: relative;
