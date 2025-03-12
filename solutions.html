@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="isotipo-energix.png">
+    <title>ENERGIX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Top Navbar -->
+      <nav class="top-navbar">
+        <div class="container">
+          <!-- Redes Sociales -->
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+      
+          <!-- Enlaces rápidos y nuevos íconos -->
+          <div class="quick-links">
+            <a href="#" class="quick-link">Formación Online</a>
+            <a href="#" class="quick-link">Comunidad</a>
+            <a href="#" class="quick-link">Contáctanos</a>
+      
+            <!-- Barra de separación -->
+            <span class="separator">|</span>
+      
+            <!-- Íconos adicionales -->
+            <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>  <!-- Carrito -->
+            <a href="#" class="icon-link"><i class="fas fa-user"></i></a>           <!-- Perfil -->
+            <a href="#" class="icon-link"><i class="fas fa-search"></i></a>         <!-- Buscar -->
+            <div class="menu-toggle-top">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+
+      <!-- Main Navbar -->
+      <nav class="main-navbar">
+        <div class="container">
+          <div class="logo">
+            <a href="/index.html">
+              <img src="/assets/logo-energix-horizontal.webp" alt="Energix Logo" class="logo-img">
+              </a>
+          </div>
+          <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul class="main-menu">
+            <li><a href="/our.html">Nosotros</a></li>
+            <li><a href="/solutions.html">Soluciones</a></li>
+            <li><a href="#industrias">Industrias</a></li>
+            <li><a href="#enered">Enered</a></li>
+            <li><a href="#puntos-red">Puntos Red</a></li>
+            <li><a href="#energia-futuro">Energía & Futuro</a></li>
+            <li><a href="#soporte">Soporte</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="enered-hero-section" data-aos="fade-in" data-aos-duration="1000">
+        <div class="container-2">
+          <div class="app-content-our" data-aos="fade-right">
+            <h2 class="enered-title">Soluciones para empresas y negocios</h2>
+            <h3 class="enered-subtitle">
+              Tenemos una amplia variedad de 
+              <br>productos y servicios a disposición
+            </h3>
+            <a href="#" class="btn btn-primary-noshadow">¡Comenzar a Ahorrar!</a>
+          </div>
+        </div>
+      </section>
+        <div class="enered-bg" ></div>
+      </section>
+
+            <!-- Supply Chain Section -->
+            <section class="supply-chain-section">
+              <div class="supply-container">
+                <h2 class="supply-title" data-aos="fade-up">
+                  Nuestra Cadena de Valor<br>
+                  & Servicios Integrados
+                </h2>
+                
+                <div class="supply-chain-visual">
+                  <div class="chain-element granel" data-aos="fade-right" data-aos-delay="200">
+                    <span class="chain-text">Suministro Granel</span>
+                  </div>
+                  
+                  <div class="chain-element flota" data-aos="fade-right" data-aos-delay="400">
+                    <span class="chain-text">Suministro Flota</span>
+                  </div>
+                  
+                  <div class="chain-element delivery" data-aos="fade-right" data-aos-delay="600">
+                    <span class="chain-text">Delivery Combustible</span>
+                  </div>
+                  
+                  <div class="chain-element industria" data-aos="fade-right" data-aos-delay="800">
+                    <span class="chain-text">Suministro Industria</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+      <!-- Plans Grid Section -->
+      <section class="tools-section" data-aos="fade-in" data-aos-duration="1000">
+        <div class="container">
+
+          <h2 class="fleet-title" data-aos="fade-up">Planes para la gestión de flotas</h2>
+          <p class="fleet-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Conocé nuestras soluciones adaptadas para cada tipo de flota.
+          </p>
+
+          <div class="tools-grid">
+            <div class="fleet-card" data-aos="fade-up">
+                  <div class="fleet-icon">
+                    <img src="/assets/icon-truck.webp" alt="Control de cargas" height="60px">
+                  </div>
+                  <h3 style="text-align: left;">Control total de cargas</h3>
+                  <p>Hacé un seguimiento de todas tus cargas de combustibles realizadas en Enered mediante:</p>
+                  <ul class="tool-features">
+                    <li>Validación sanitial de la ubicación del vehículo al momento de la carga</li>
+                    <li>Alertas por cambios del tipo de combustible utilizado</li>
+                    <li>Verificación de litros ingresados al tanque vs remito facturado</li>
+                    <li>Alertas sobre variaciones abruptas del tanque</li>
+                    <p class="plan-contact"></p>
+                  </ul>
+                  <a href="#" class="btn btn-secondary">¡Comenzar a Ahorrar!</a>
+                  <a href="#" class="plan-more-info">Mayor Informacion</a>
+                </div>
+
+                <div class="fleet-card" data-aos="fade-up">
+                  <div class="fleet-icon">
+                    <img src="/assets/icon-website.webp" alt="Control de cargas" height="60px">
+                  </div>
+                  <h3 style="text-align: left;">Suministro Flota</h3>
+                  <p>Hacé un seguimiento de todas tus cargas de combustibles realizadas en Enered mediante:</p>
+                  <ul class="tool-features">
+                    <li>Validación sanitial de la ubicación del vehículo al momento de la carga</li>
+                    <li>Alertas por cambios del tipo de combustible utilizado</li>
+                    <li>Verificación de litros ingresados al tanque vs remito facturado</li>
+                    <li>Alertas sobre variaciones abruptas del tanque</li>
+                    <p class="plan-contact"></p>
+                  </ul>
+                  <a href="#" class="btn btn-secondary">¡Comenzar a Ahorrar!</a>
+                  <a href="#" class="plan-more-info">Mayor Informacion</a>
+                </div>
+
+                <div class="fleet-card" data-aos="fade-up">
+                  <div class="fleet-icon">
+                    <img src="/assets/icon-truck-delivery.webp" alt="Control de cargas" height="60px">
+                  </div>
+                  <h3 style="text-align: left;">Delivery Comb.</h3>
+                  <p>Hacé un seguimiento de todas tus cargas de combustibles realizadas en Enered mediante:</p>
+                  <ul class="tool-features">
+                    <li>Validación sanitial de la ubicación del vehículo al momento de la carga</li>
+                    <li>Alertas por cambios del tipo de combustible utilizado</li>
+                    <li>Verificación de litros ingresados al tanque vs remito facturado</li>
+                    <li>Alertas sobre variaciones abruptas del tanque</li>
+                    <p class="plan-contact"></p>
+                  </ul>
+                  <a href="#" class="btn btn-secondary">¡Comenzar a Ahorrar!</a>
+                  <a href="#" class="plan-more-info">Mayor Informacion</a>
+                </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- Coverage Section -->
+    <section class="plans-section">
+      <div class="container">
+        <h2 class="coverage-title" data-aos="fade-up">Cobertura a Nivel Nacional en todos los puertos</h2>
+        <p class="coverage-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Conocé nuestras soluciones adaptadas para cada tipo de flota.
+        </p>
+
+        <div class="coverage-content">
+          <div class="coverage-map" data-aos="fade-right">
+            <img src="/assets/map-white.webp" alt="Mapa de cobertura">
+          </div>
+
+          <div class="coverage-zones" data-aos="fade-left">
+            <div class="zone">
+              <h3 style="color: #00DCDD;">Zona Norte</h3>
+              <ul>
+                <li>Trujillo</li>
+                <li>Piura</li>
+                <li>Chiclayo</li>
+                <li>Pacasmayo</li>
+                <li>Chepén</li>
+                <li>Cajamarca</li>
+                <li>Chimbote</li>
+                <li>Jaen</li>
+                <li>Casma</li>
+                <li>Carhuaz</li>
+              </ul>
+            </div>
+
+            <div class="zone">
+              <h3 style="color: #AB33F4";>Zona Centro</h3>
+              <ul>
+                <li>Lima</li>
+                <li>Ica</li>
+                <li>Huancayo</li>
+                <li>Huaraz</li>
+                <li>Caraz</li>
+                <li>Lurin</li>
+                <li>Ayacucho</li>
+                <li>Pasco</li>
+                <li>Junin</li>
+                <li>Huacho</li>
+                <li>Cañete</li>
+                <li>Chancay</li>
+                <li>Huaral</li>
+                <li>Tarma</li>
+              </ul>
+            </div>
+
+            <div class="zone">
+              <h3 style="color: #0032EA";>Zona Sur</h3>
+              <ul>
+                <li>Arequipa</li>
+                <li>Curzco</li>
+                <li>Tacna</li>
+                <li>Pisco</li>
+                <li>Puno</li>
+                <li>Juliaca</li>
+                <li>Moquegua</li>
+                <li>Abancay</li>
+                <li>Andahuaylas</li>
+                <li>Apurimac</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contacto">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-up">¿Estás listo para desarrollar o escalar tu
+            <br>proyecto en combustible o energía?</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Contáctanos, solicita una demostración de nuestros productos y servicios e invítanos a trabajar a tu lado
+          </p>
+          
+          <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Nombre(s)*" required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Apellido(s)*" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" placeholder="Correo Electrónico" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Número de Teléfono" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Nombre de tu Empresa*" required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="RUC*" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Provincia/Departamento*  " required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Correo electrónico de empresa" required>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <textarea placeholder="Déjanos tu Mensaje" rows="4" required></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>He leído y acepto la política de privacidad</span>
+              </label>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>He leído y acepto los términos y condiciones</span>
+              </label>
+            </div>
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>He leído y acepto la política de cookies</span>
+              </label>
+            </div>
+            <div class="form-group recaptcha">
+              <div class="g-recaptcha"></div>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-top">
+            
+            <div class="footer-links">
+              <div class="footer-column">
+                <img src="assets/logo-energix-vertical.webp" alt="Energix - Soluciones en Energías" height="35px">
+                
+              
+                <div class="footer-contact">
+                  <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                      <strong>Llámanos</strong><br>
+                      (044) 659-3519 | +51 972 228 870
+                    </div>
+                  </div>
+                  
+                  <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                      <strong>Escríbenos</strong><br>
+                      hola@energix.pe
+                    </div>
+                  </div>
+              
+                  <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                      <strong>Visítanos</strong><br>
+                      Av. Fátima # 567 - Piso 4 - Trujillo
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer-column">
+                <h3>Nosotros</h3>
+                <ul>
+                  <li><a href="#">Cultura</a></li>
+                  <li><a href="#">Trayectoria</a></li>
+                  <li><a href="#">Trabaja con nosotros</a></li>
+                  <li><a href="#">Responsabilidad Social</a></li>
+                  <li><a href="#">Ser socio</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Soluciones</h3>
+                <ul>
+                  <li><a href="#">Enered</a></li>
+                  <li><a href="#">Combustibles</a></li>
+                  <li><a href="#">Estaciones</a></li>
+                  <li><a href="#">Almacenes</a></li>
+                  <li><a href="#">Consultoría</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Atención</h3>
+                <ul>
+                  <li><a href="#">Proveedor</a></li>
+                  <li><a href="#">Comunicaciones</a></li>
+                  <li><a href="#">Comprobantes</a></li>
+                  <li><a href="#">Facturación</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Ética y Transparencia</h3>
+                <ul>
+                  <li><a href="#">Código de Ética</a></li>
+                  <li><a href="#">Políticas Corporativas</a></li>
+                  <li><a href="#">Términos y Condiciones de Servicio</a></li>
+                  <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+           
+            <div class="social-links">
+              <p>Síguenos en:</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>ENERED | Red inteligente de Energías | Copyright © 2025 | Energía Perú | Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
+

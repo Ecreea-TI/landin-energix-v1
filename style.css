@@ -1943,21 +1943,16 @@ color: var(--blue-accent);
   margin: 0 auto;
 }
 
-.coverage-container {
-
-}
-
 .coverage-title {
   font-family: 'TT Supermolot Neue Medium', sans-serif;
   font-size: 2.5rem;
   color: #0032EA;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .coverage-subtitle {
   font-family: 'TT Supermolot Neue Thin', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #5B5B5B;
   text-align: center;
   margin-bottom: 50px;
@@ -1992,6 +1987,7 @@ color: var(--blue-accent);
 
 .zone h3 {
   color: #0032EA;
+  font-size: 1.5rem;
 }
 
 .zone ul {
@@ -2000,9 +1996,9 @@ color: var(--blue-accent);
 }
 
 .zone ul li {
-  color: #fff;
+  color: #000;
   margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   opacity: 0.8;
   transition: all 0.3s ease;
 }
