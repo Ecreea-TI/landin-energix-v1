@@ -52,6 +52,7 @@
 :root {
   --primary-color: #6a11cb;
   --secondary-color: #2575fc;
+  --dark-blue: #002180;
   --accent-color: #ff00ff;
   --blue-accent: #00FFFF;
   --dark-bg: #0a0a1a;
@@ -2497,7 +2498,7 @@ color: var(--blue-accent);
 }
 
 .project-plan-card a {
-  margin: 50px 0px 14px 0px;
+  margin: 60px 0px 40px 0px;
 }
 
 .project-plan-icon {
@@ -2509,7 +2510,79 @@ color: var(--blue-accent);
   font-family: 'TT Supermolot Neue Regular', sans-serif, sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   text-align: left;
   color: #002180;
+}
+
+.project-skills-section {
+  padding: 80px 0;
+  background: #fff;
+  position: relative;
+}
+
+.line-decoration {
+  width: 50%;
+  height: 12px;
+  background: var(--blue-accent);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el elemento horizontalmente */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  background: var(--blue-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.skill-item h3 {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 15px;
+}
+
+.skill-item p {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-size: 1rem;
+  color: var(--dark-blue);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
