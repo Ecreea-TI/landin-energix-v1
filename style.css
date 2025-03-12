@@ -2366,3 +2366,150 @@ color: var(--blue-accent);
     height: 20px;
   }
 }
+
+/* Project Plan Grid Section */
+.project-plan-section {
+  padding: 0px 0px 100px 0px;
+  background: #fff;
+}
+
+.project-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+  align-items: start;
+}
+
+.tool-card {
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+
+}
+
+.tool-card p {
+  padding: 30px 0px;
+
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-blue);
+}
+
+.tool-icon {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tool-card h3 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.tool-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tool-features li {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tool-features li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: var(--blue-accent);
+  border-radius: 50%;
+}
+
+.project-plan-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  padding: 150px 20px 0px 10px;
+  line-height: 1.2em;
+  font-size: 2.5rem;
+  text-align: center;
+  background: #592CC9;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.project-plan-subtitle {
+  
+  font-family: 'TT Supermolot Neue Thin', sans-serif, sans-serif;
+  font-weight: 100; /* Puedes cambiarlo según el peso que necesites */
+  padding: 0px 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;  
+  max-width: 85%;
+  margin: 0 auto 50px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .project-plan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-plan-card {
+  padding: 50px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid #592CC9;
+  text-align: left;
+}
+
+.project-plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--neon-glow);
+}
+
+.project-plan-card p {
+  color: #000;
+}
+
+.project-plan-card ul {
+  color: #000;
+}
+
+.project-plan-card a {
+  margin: 50px 0px 14px 0px;
+}
+
+.project-plan-icon {
+  display: flex;
+  padding: 20px 0px
+}
+
+.project-plan-card h3 {
+  font-family: 'TT Supermolot Neue Regular', sans-serif, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #002180;
+}
