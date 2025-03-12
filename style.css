@@ -1256,13 +1256,28 @@ textarea {
 .benefits-section {
   position: relative;
   width: 100vw;
-  height: 90vh; /* Añadido para ocupar todo el alto de la ventana */
-  background: url('/assets/bg-map.webp') no-repeat left;
-  background-size: 100% 100%; /* Cambiado para estirar la imagen al 100% de ancho y alto */
+  height: 97vh; /* Añadido para ocupar todo el alto de la ventana */
+  background: url('/assets/map-stations-curve.svg') no-repeat;
+  background-size: contain; /* Cambiado para estirar la imagen al 100% de ancho y alto */
+  /*background-position: right;*/
+  background-position: 85% -4px;
   padding: 0px 0px 0px 0px;
   align-items: center;
   overflow: hidden;
   opacity: 0;
+  animation: floatBackground-1 4s ease-in-out infinite;
+}
+
+@keyframes floatBackground-1 {
+  0% {
+    background-position: 85%;
+  }
+  50% {
+    background-position: 86% 10px;
+  }
+  100% {
+    background-position: 85%;
+  }
 }
 
 .benefits-title-our {
@@ -1296,6 +1311,12 @@ color: var(--blue-accent);
   margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+  .benefits-grid {
+      grid-template-columns: 300px;
+  }
+}
+
 .benefits-card {
   padding: 20px 30px;
   border-radius: 15px;
@@ -1303,6 +1324,8 @@ color: var(--blue-accent);
   transition: var(--transition);
   border: 1px solid #00FFFF;
 }
+
+
 
 .benefits-card:hover {
   transform: translateY(-10px);
@@ -2130,3 +2153,216 @@ color: var(--blue-accent);
   color: transparent;
 }
 
+.process-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.process-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.process-grid::before {
+  content: '';
+  position: absolute;
+  top: 206px;
+  left: 123px;
+  width: 82%;
+  height: 5px;
+  background: url('/assets/line-color-process.svg') repeat-x;
+  background-size: contain;
+  animation: showProcessLine 1.5s ease-out forwards;
+  animation-delay: 0.5s; /* Añadido delay de 0.5 segundos */
+  opacity: 0; /* Asegura que la línea esté invisible antes de comenzar */
+}
+
+@keyframes showProcessLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 82%;
+    opacity: 1;
+  }
+}
+
+.process-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.process-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-icon-general {
+  margin-bottom: 53px
+}
+
+.sp-icon-prestudio {
+  margin-bottom: 20px
+}
+
+.sp-icon-itf {
+  margin-bottom: 20px
+}
+
+.sp-icon-build {
+  margin-bottom: 20px
+}
+
+.sp-icon-operation {
+  margin-bottom: 20px
+}
+
+.process-icon img {
+  width: 150px;
+  height: auto;
+}
+
+.process-item .osi {
+  margin-bottom: 10px;
+  height: 39px;
+}
+
+.process-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+  font-weight: 400;
+}
+
+.process-item h2 {
+  font-size: 1.2rem;
+  line-height: 1.1em;
+  margin-bottom: 15px;
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.process-item ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  background-color: #E9F2F7;
+}
+
+.process-item ul li {
+  color: #5B5B5B;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 992px) {
+  .process-grid {
+    flex-wrap: wrap;
+  }
+  
+  .process-item {
+    flex: 1 1 45%;
+  }
+  
+  .process-grid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-item {
+    flex: 1 1 100%;
+  }
+}
+
+.process-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
+  border: 3px solid #fff;
+}
+
+/* Colores específicos para cada línea punteada */
+
+.dot.gray {
+  background-color: #A5A5A5; 
+  box-shadow: 0 0 0 5px #A5A5A5;
+}
+
+.dot.blue { 
+  background-color: #5B9BD5; 
+  box-shadow: 0 0 0 5px #5B9BD5;
+}
+.dot.green { 
+  background-color: #70AD47; 
+  box-shadow: 0 0 0 5px #70AD47;
+}
+.dot.yellow { 
+  background-color: #FFC000; 
+  box-shadow: 0 0 0 5px #FFC000;
+}
+.dot.blue-dark { 
+  background-color: #4472C4; 
+  box-shadow: 0 0 0 5px #4472C4;
+}
+
+.dotted-line {
+  height: 50px;
+  width: 3px;
+  background-size: 3px 8px;
+  background-repeat: space;
+  background-position: center;
+}
+
+/* Colores específicos para cada línea punteada */
+
+.dotted-line.gray { 
+  background-image: radial-gradient(circle, #A5A5A5 2px, transparent 2px);
+}
+
+.dotted-line.blue { 
+  background-image: radial-gradient(circle, #5B9BD5 2px, transparent 2px);
+}
+.dotted-line.green { 
+  background-image: radial-gradient(circle, #70AD47 2px, transparent 2px);
+}
+.dotted-line.yellow { 
+  background-image: radial-gradient(circle, #FFB800 2px, transparent 2px);
+}
+.dotted-line.blue-dark { 
+  background-image: radial-gradient(circle, #4472C4 2px, transparent 2px);
+}
+
+@media (max-width: 768px) {
+  .process-dots {
+    margin: 20px 0;
+  }
+  
+  .dotted-line {
+    height: 20px;
+  }
+}
