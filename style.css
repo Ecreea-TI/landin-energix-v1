@@ -111,6 +111,21 @@ ul {
   outline: none;
 }
 
+/* Buttons */
+.btn-lg {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  /*text-transform: uppercase;*/
+  letter-spacing: 1px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 .btn-primary {
   background: #00FFFF;
   color: #000;
@@ -130,6 +145,59 @@ ul {
 .btn-primary-noshadow:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(6, 224, 240, 0.205), 0 0 30px rgba(37, 117, 252, 0.6);
+}
+
+.btn-404 {
+  background: #00FFFF;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: emphasis 2s infinite;
+}
+
+.btn-404:hover {
+  animation: none;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.btn-404:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-404:hover:before {
+  left: 100%;
+}
+
+@keyframes emphasis {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 255, 255, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 255, 255, 0);
+  }
 }
 
 /* Top Navbar */
@@ -1035,7 +1103,7 @@ textarea {
   flex-wrap: wrap;
   gap: 30px;
   padding: 30px 0;
-  border-top: 1px solid rgba(26, 227, 253, 0.411);
+  border-bottom: 1px solid rgba(26, 227, 253, 0.411);
 }
 
 .footer-links h3 {
@@ -2584,5 +2652,315 @@ color: var(--blue-accent);
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Styles Services page */
+
+.services-hero-section {
+  position: relative;
+  width: 100%;
+  height: 788px;
+  background-position: center;
+  /*padding: 80px 0px 100px 0px;*/
+  align-items: center;
+  overflow: hidden;
+  animation: floatBackground 4s ease-in-out infinite;
+}
+
+.services-content-section {
+  flex: 1;
+  max-width: 100%; /* Changed from 50% to 100% for better mobile display */
+  text-align: left;
+  padding: 170px 0px 250px 250px;
+}
+
+
+.services-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('/assets/banner-services.webp');
+  background-size: cover;
+  background-position: center bottom; /* This centers both horizontally and vertically */
+}
+
+.services-title {
+  font-family: 'TT Supermolot Neue Demibold', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  font-size: 3.1rem;
+  line-height: 1.2em;
+  background: #33007C;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.services-subtitle {
+  font-family: 'TT Supermolot Neue Thin', sans-serif, sans-serif;
+  font-weight: 400; /* Puedes cambiarlo según el peso que necesites */
+  font-size: 2.8rem;
+  line-height: 2.8rem;  
+  margin: 0 auto 30px;
+  color: #33007C;
+}
+
+/* 404 styles page */
+
+.error-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error-animation {
+  position: absolute;
+  left: 38%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.error-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.error-title {
+  font-family: 'TT Supermolot Neue Medium', sans-serif;
+  font-size: 6rem;
+  color: #fff;
+}
+
+.error-subtitle {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-size: 2rem;
+  color: var(--blue-accent);
+  margin-bottom: 1.5rem;
+}
+
+.error-text {
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .error-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .error-animation {
+    max-width: 300px;
+  }
+
+  .error-title {
+    font-size: 3rem;
+  }
+
+  .error-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.steps-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 60px;
+  padding: 20px 0;
+}
+
+.steps-timeline::after {
+  content: '';
+  position: absolute;
+  top: 104px;
+  left: 9%;
+  right: 8%;
+  height: 2px;
+  background: #AAAAAA;
+  z-index: 1;
+}
+
+.step-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 74px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Colores específicos para cada punto */
+.step-item:nth-child(1) .step-dot { background: #0032EA; }
+.step-item:nth-child(2) .step-dot { background: #002180; }
+.step-item:nth-child(3) .step-dot { background: #592CC9; }
+.step-item:nth-child(4) .step-dot { background: #00DCDD; }
+.step-item:nth-child(5) .step-dot { background: #002180; }
+.step-item:nth-child(6) .step-dot { background: #0032EA; }
+
+.step-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background: #0032EA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.step-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.step-content {
+  position: relative;
+  width: 100%;
+}
+
+.step-arrow {
+  background: #0032EA;
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+  -webkit-mask: url('/assets/arrow.svg') no-repeat center;
+  mask: url('/assets/arrow.svg') no-repeat center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  width: 220px;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-arrow h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+  font-family: 'TT Supermolot Neue Regular', sans-serif;
+  text-transform: uppercase;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px; 
+  background: #808080;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 15px;
+}
+
+.number-1 {
+  background: #0032EA;
+}
+
+.number-2 {
+  background: #002180;
+}
+
+.number-3 {
+  background: #592CC9;
+}
+
+.number-4 {
+  background: #00B8C3;
+}
+
+.number-5 {
+  background: #0032EA
+}
+
+.number-6 {
+  background: #002180;
+}
+
+/* Colores específicos para cada paso */
+.step-item:nth-child(1) .step-icon,
+.step-item:nth-child(1) .step-arrow { background: #0032EA; }
+
+.step-item:nth-child(2) .step-icon,
+.step-item:nth-child(2) .step-arrow { background: #002180; }
+
+.step-item:nth-child(3) .step-icon,
+.step-item:nth-child(3) .step-arrow { background: #592CC9; }
+
+.step-item:nth-child(4) .step-icon,
+.step-item:nth-child(4) .step-arrow { background: #00DCDD; }
+
+.step-item:nth-child(5) .step-icon,
+.step-item:nth-child(5) .step-arrow { background: #002180; }
+
+.step-item:nth-child(6) .step-icon,
+.step-item:nth-child(6) .step-arrow { background: #0032EA; }
+
+@media (max-width: 992px) {
+  .steps-timeline {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .step-item {
+    flex: 1 1 30%;
+  }
+
+  .step-arrow {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-item {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .step-item {
+    flex: 1 1 100%;
   }
 }
