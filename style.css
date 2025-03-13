@@ -221,7 +221,7 @@ ul {
 
 @media (max-width: 768px) {
   .social-links {
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
   }
 }
@@ -1252,7 +1252,7 @@ textarea {
   
   .social-links, .quick-links {
     justify-content: center;
-    flex-direction: column;
+    /*flex-direction: column;*/
   }
   
   .top-navbar .container {
